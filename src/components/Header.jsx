@@ -8,7 +8,7 @@ const Header = () => {
       {/* LOGO */}
       <div className="flex items-center gap-4">
         <a href="#">
-          <img className="max-w-20" src="/images/logo.png" alt="Logo FeeIU" />
+          <img className="max-w-14" src="/images/logo.png" alt="Logo FeeIU" />
         </a>
         <h1 className="text-principal font-bold text-2xl tracking-tighter">
           FeeIU
@@ -25,7 +25,7 @@ const Header = () => {
 
       {/* NAVIGATION MOBILE */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#030e19] border-blue-600 border-2 mt-6 rounded-2xl md:hidden">
+        <div className="absolute top-full left-0 w-full bg-[#030e19] border-slate-900 border-2 mt-6 rounded-2xl md:hidden">
           <Navigation closeMenu={() => setMenuOpen(false)} />
         </div>
       )}
@@ -93,12 +93,12 @@ const Navigation = ({ closeMenu }) => {
 // MENU BURGER
 const Menu = ({ toggleMenu }) => {
   return (
-    <span
-      className="text-principal text-4xl leading-0 md:hidden cursor-pointer"
+    <button
+      className="text-principal text-4xl leading-0 md:hidden cursor-pointer border-none"
       onClick={toggleMenu}
     >
       <ion-icon name="menu-outline"></ion-icon>
-    </span>
+    </button>
   );
 };
 

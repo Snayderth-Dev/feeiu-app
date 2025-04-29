@@ -1,6 +1,8 @@
 import AuraBlurR from "./BlurR.jsx";
 import AuraBlurL from "./BlurL.jsx";
 import cards from "../data/cards.js";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Cartas = () => {
   return (
@@ -28,55 +30,79 @@ const Cartas = () => {
 };
 
 const Card = ({ cardObj }) => {
-  return (
-    <div className="border-2 border-blue-800 rounded-2xl p-3 shadow-md z-20 bg-[#030e19]">
-      <PanelProfile cardObj={cardObj} />
+  const [isOpen, setIsOpen] = useState(false);
 
-      <NoteCard cardObj={cardObj} />
+  return (
+    <div className="border-2 border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14]">
+      <PanelProfile cardObj={cardObj} isOpen={isOpen} setIsOpen={setIsOpen} />
+
+      <NoteCard cardObj={cardObj} isOpen={isOpen} />
     </div>
   );
 };
 
 //---------- PANEL PROFULE
 
-const PanelProfile = ({ cardObj }) => {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, "0");
+const PanelProfile = ({ cardObj, isOpen, setIsOpen }) => {
+  // const now = new Date();
+  // const hours = now.getHours();
+  // const minutes = String(now.getMinutes()).padStart(2, "0");
 
   return (
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-2">
-        <div className="bg-gray-900 p-3 rounded-full">
+        <div className="bg-slate-900 p-3 rounded-full">
           <img
             src={cardObj.imgProfile}
             alt="Corazon Blanco"
             className="w-4 h-full"
           />
         </div>
-        <h3 className="text-principal">{cardObj.name}</h3>
+        <h3 className="text-principal font-bold">{cardObj.name}</h3>
       </div>
-
-      {/* HOUR */}
-
-      <div>
-        <p className="text-principal text-[12px] font-bold">
-          {hours}:{minutes}
-        </p>
-      </div>
+      {/* CHEVRON */}
+      <Chevron isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
-
 //--------- NOTE CARD
+const NoteCard = ({ cardObj, isOpen }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.p
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.2 }}
+          className="paragraph text-[16px] text-left mt-2 overflow-hidden"
+        >
+          {cardObj.note}
+        </motion.p>
+      )}
+    </AnimatePresence>
+  );
+};
 
-const NoteCard = ({ cardObj }) => {
-  return <p className="paragraph text-[16px] text-left mt-2">{cardObj.note}</p>;
+//--------- CHEVRON
+const Chevron = ({ isOpen, setIsOpen }) => {
+  return (
+    <button
+      className="text-principal text-2xl flex cursor-pointer border-none bg-none"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {isOpen ? (
+        <ion-icon name="chevron-up-outline"></ion-icon>
+      ) : (
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      )}
+    </button>
+  );
 };
 
 const Line = () => {
   return (
-    <div className="w-1 h-full bg-emerald-400 absolute top-0 left-[50%] inline-flex z-0"></div>
+    <div className="w-1 h-full bg-slate-800 absolute top-0 left-[50%] inline-flex z-0"></div>
   );
 };
 

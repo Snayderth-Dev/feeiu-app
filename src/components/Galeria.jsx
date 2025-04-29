@@ -58,7 +58,7 @@ const Controls = ({ handlePrevious, handleNext, step }) => {
     <div className="flex justify-between items-center mt-10 w-60 mx-auto">
       <button
         onClick={handlePrevious}
-        className="text-blue-400 text-5xl flex items-center cursor-pointer"
+        className="text-[#1c7ed6] text-5xl flex items-center cursor-pointer"
       >
         <ion-icon name="arrow-back-circle-outline"></ion-icon>
       </button>
@@ -73,7 +73,7 @@ const Controls = ({ handlePrevious, handleNext, step }) => {
 
       <button
         onClick={handleNext}
-        className="text-blue-400 text-5xl flex items-center cursor-pointer"
+        className="text-[#1c7ed6] text-5xl flex items-center cursor-pointer"
       >
         <ion-icon name="arrow-forward-circle-outline"></ion-icon>
       </button>

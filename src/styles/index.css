@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: #030e19;
+  background-color: #020b14;
   font-family: "Varela Round", sans-serif;
 }
 
@@ -16,11 +16,11 @@ body {
     @apply fixed flex items-center max-w-[390px] justify-between mx-auto mt-5 border-2 border-blue-600 py-2 px-4 rounded-full backdrop-blur-sm shadow-lg shadow-blue-900 md:max-w-3xl lg:w-5xl md:rounded-full;
   } */
   .header {
-    @apply fixed flex w-90 justify-between items-center backdrop-blur-md border-2 border-blue-800 py-3 px-5 rounded-full top-3 left-1/2 transform -translate-x-1/2 z-50 md:w-3xl lg:w-5xl;
+    @apply fixed flex w-90 justify-between items-center backdrop-blur-md border-2 border-slate-800 py-3 px-5 rounded-full top-3 left-1/2 transform -translate-x-1/2 z-50 md:w-3xl lg:w-5xl;
   }
 
   .btn-custom {
-    @apply cursor-pointer bg-[#041220] font-semibold text-emerald-400 py-1.5 px-7 border-2 border-blue-800 rounded-full inline-block visited:text-emerald-400 active:bg-blue-950 hover:shadow-md transition duration-200 ease-in-out hover:shadow-blue-900;
+    @apply cursor-pointer bg-[#041220] font-semibold text-emerald-400 py-1.5 px-7 border-2 border-[#1c7ed6] rounded-full inline-block visited:text-emerald-400 active:bg-blue-950 hover:shadow-md transition duration-200 ease-in-out hover:shadow-blue-900;
   }
   .paragraph {
     @apply text-paragraph leading-6 text-center font-medium md:text-left lg:text-[18px];
@@ -29,21 +29,21 @@ body {
     @apply px-6 my-30 md:px-20 lg:px-35 xl:px-40;
   }
   .subtitle-note {
-    @apply text-[12px] uppercase font-semibold text-emerald-400 border-2 border-blue-600 py-1 px-2 bg-[#041220] rounded-full;
+    @apply text-[12px] uppercase font-semibold text-[#63e6be] border-2 border-[#1c7ed6] py-1 px-2 bg-[#041220] rounded-full;
   }
   .sub-h2 {
     @apply text-4xl text-principal font-bold font-principial text-center my-5 md:text-left lg:text-5xl uppercase;
   }
   .dots {
-    @apply w-2 h-2 rounded-full bg-gray-500;
+    @apply w-2 h-2 rounded-full bg-slate-800;
   }
   .activeDots {
-    @apply w-2 h-2 rounded-full bg-blue-600;
+    @apply w-2 h-2 rounded-full bg-[#63e6be];
   }
 }
 
 @theme {
   --font-principial: "Inter", sans-serif;
   --color-principal: #e7f5ff;
-  --color-paragraph: #adb5bd;
+  --color-paragraph: #868e96;
 }

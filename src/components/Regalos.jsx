@@ -13,7 +13,7 @@ const Regalos = () => {
         <BlurR />
       </div>
 
-      <div className="border-2 border-blue-800 bg-[#030e19] rounded-2xl px-7 md:px-7 py-10 flex gap-4 flex-col w-80 mx-auto md:w-90 xl:w-100">
+      <div className="border-2 border-slate-900 shadow-lg shadow-slate-900 bg-[#020b14] rounded-2xl px-7 md:px-7 py-10 flex gap-4 flex-col w-80 mx-auto md:w-90 xl:w-100">
         {/* */}
         {caciones.map((song) => (
           <Musics cancionesObj={song} />
@@ -44,7 +44,7 @@ const Musics = ({ cancionesObj }) => {
       <li>
         <a
           href={cancionesObj.link}
-          className="text-principal bg-gray-800 p-3 rounded-full text-center text-[12px] flex justify-center xl:text-[14px]"
+          className="text-principal bg-slate-900 p-3 rounded-full text-center text-[12px] flex justify-center xl:text-[14px]"
           target="_blank"
         >
           {cancionesObj.author} - {cancionesObj.music}
