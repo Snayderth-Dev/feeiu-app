@@ -1,7 +1,7 @@
+import { useState } from "react";
 import AuraBlurR from "./BlurR.jsx";
 import AuraBlurL from "./BlurL.jsx";
 import cards from "../data/cards.js";
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Cartas = () => {
@@ -16,7 +16,7 @@ const Cartas = () => {
       {/* CARD MSG */}
       <article className="grid gap-12 relative max-w-md mx-auto">
         {cards.map((msg) => (
-          <Card cardObj={msg} />
+          <Card cardObj={msg} key={msg.id} />
         ))}
 
         {/* Aura Blur */}
@@ -33,8 +33,11 @@ const Card = ({ cardObj }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-2 border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14]">
-      <PanelProfile cardObj={cardObj} isOpen={isOpen} setIsOpen={setIsOpen} />
+    <div
+      className="border border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14] cursor-pointer"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <PanelProfile cardObj={cardObj} />
 
       <NoteCard cardObj={cardObj} isOpen={isOpen} />
     </div>
@@ -43,7 +46,7 @@ const Card = ({ cardObj }) => {
 
 //---------- PANEL PROFULE
 
-const PanelProfile = ({ cardObj, isOpen, setIsOpen }) => {
+const PanelProfile = ({ cardObj }) => {
   // const now = new Date();
   // const hours = now.getHours();
   // const minutes = String(now.getMinutes()).padStart(2, "0");
@@ -61,7 +64,7 @@ const PanelProfile = ({ cardObj, isOpen, setIsOpen }) => {
         <h3 className="text-principal font-bold">{cardObj.name}</h3>
       </div>
       {/* CHEVRON */}
-      <Chevron isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Chevron />
     </div>
   );
 };
@@ -85,12 +88,9 @@ const NoteCard = ({ cardObj, isOpen }) => {
 };
 
 //--------- CHEVRON
-const Chevron = ({ isOpen, setIsOpen }) => {
+const Chevron = ({ isOpen }) => {
   return (
-    <button
-      className="text-principal text-2xl flex cursor-pointer border-none bg-none"
-      onClick={() => setIsOpen(!isOpen)}
-    >
+    <button className="text-principal text-2xl flex border-none bg-none cursor-pointer">
       {isOpen ? (
         <ion-icon name="chevron-up-outline"></ion-icon>
       ) : (

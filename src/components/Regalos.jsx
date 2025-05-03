@@ -13,10 +13,10 @@ const Regalos = () => {
         <BlurR />
       </div>
 
-      <div className="border-2 border-slate-900 shadow-lg shadow-slate-900 bg-[#020b14] rounded-2xl px-7 md:px-7 py-10 flex gap-4 flex-col w-80 mx-auto md:w-90 xl:w-100">
+      <div className="border border-slate-900 shadow-lg shadow-slate-900 bg-[#020b14] rounded-2xl px-7 md:px-7 py-10 flex gap-4 flex-col w-80 mx-auto md:w-90 xl:w-100">
         {/* */}
         {caciones.map((song) => (
-          <Musics cancionesObj={song} />
+          <Musics cancionesObj={song} key={song.music} />
         ))}
         {/* */}
       </div>

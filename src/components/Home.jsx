@@ -51,7 +51,7 @@ const ImagesNovios = () => {
 const HomeText = () => {
   return (
     <div className="flex flex-col gap-7 lg:gap-8">
-      <h1 className="text-principal text-center lg:leading-14 text-4xl font-extrabold font-principial lg:text-6xl md:text-left">
+      <h1 className="text-principal text-center lg:leading-15 text-4xl font-extrabold font-principial lg:text-6xl md:text-left">
         El principio de nuestra historia y un inicio que cambió mi mundo.
       </h1>
 
