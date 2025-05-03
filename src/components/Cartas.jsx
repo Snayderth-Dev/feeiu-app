@@ -37,7 +37,7 @@ const Card = ({ cardObj }) => {
       className="border border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14] cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <PanelProfile cardObj={cardObj} />
+      <PanelProfile cardObj={cardObj} isOpen={isOpen} />
 
       <NoteCard cardObj={cardObj} isOpen={isOpen} />
     </div>
@@ -46,7 +46,7 @@ const Card = ({ cardObj }) => {
 
 //---------- PANEL PROFULE
 
-const PanelProfile = ({ cardObj }) => {
+const PanelProfile = ({ cardObj, isOpen }) => {
   // const now = new Date();
   // const hours = now.getHours();
   // const minutes = String(now.getMinutes()).padStart(2, "0");
@@ -64,7 +64,7 @@ const PanelProfile = ({ cardObj }) => {
         <h3 className="text-principal font-bold">{cardObj.name}</h3>
       </div>
       {/* CHEVRON */}
-      <Chevron />
+      <Chevron isOpen={isOpen} />
     </div>
   );
 };
