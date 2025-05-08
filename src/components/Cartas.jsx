@@ -91,11 +91,13 @@ const NoteCard = ({ cardObj, isOpen }) => {
 const Chevron = ({ isOpen }) => {
   return (
     <button className="text-principal text-2xl flex border-none bg-none cursor-pointer">
-      {isOpen ? (
+      <span
+        className={`flex transition-transform duration-200 ${
+          isOpen ? "rotate-180" : ""
+        }`}
+      >
         <ion-icon name="chevron-up-outline"></ion-icon>
-      ) : (
-        <ion-icon name="chevron-down-outline"></ion-icon>
-      )}
+      </span>
     </button>
   );
 };
