@@ -39,7 +39,7 @@ const Card = ({ cardObj }) => {
     >
       <PanelProfile cardObj={cardObj} isOpen={isOpen} />
 
-      <NoteCard cardObj={msg.id} isOpen={isOpen} />
+      <NoteCard cardObj={msg} isOpen={isOpen} />
     </div>
   );
 };
@@ -80,7 +80,7 @@ const NoteCard = ({ cardObj, isOpen }) => {
           transition={{ duration: 0.2 }}
           className="paragraph text-[16px] text-left mt-2 overflow-hidden"
         >
-          {cardObj.note}
+          {null}
         </motion.p>
       )}
     </AnimatePresence>
