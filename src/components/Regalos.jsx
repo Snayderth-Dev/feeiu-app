@@ -6,7 +6,7 @@ const Regalos = () => {
   return (
     <section
       id="regalos"
-      className="spacing-sect flex flex-col md:flex-row gap-12 relative"
+      className="spacing-sect flex flex-col md:flex-row gap-12 relative items-center"
     >
       <div>
         <Text />
@@ -47,7 +47,7 @@ const Musics = ({ cancionesObj }) => {
           className="text-principal bg-slate-900 p-3 rounded-full text-center text-[12px] flex justify-center xl:text-[14px]"
           target="_blank"
         >
-          {cancionesObj.author} - {cancionesObj.music}
+          {cancionesObj.load} {//- {cancionesObj.music}}
         </a>
       </li>
     </ul>
