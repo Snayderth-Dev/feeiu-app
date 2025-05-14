@@ -80,7 +80,7 @@ const NoteCard = ({ cardObj, isOpen }) => {
           transition={{ duration: 0.2 }}
           className="paragraph text-[16px] text-left mt-2 overflow-hidden"
         >
-          {null}
+          {cardObj.id}
         </motion.p>
       )}
     </AnimatePresence>
