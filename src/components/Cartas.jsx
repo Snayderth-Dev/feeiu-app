@@ -39,7 +39,7 @@ const Card = ({ cardObj }) => {
     >
       <PanelProfile cardObj={cardObj} isOpen={isOpen} />
 
-      <NoteCard cardObj={cardObj} isOpen={isOpen} />
+      <NoteCard cardObj={null} isOpen={isOpen} />
     </div>
   );
 };
