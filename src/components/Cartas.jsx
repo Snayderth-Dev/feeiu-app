@@ -37,9 +37,9 @@ const Card = ({ cardObj }) => {
       className="border border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14] cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <PanelProfile cardObj={msg} isOpen={isOpen} />
+      <PanelProfile cardObj={cardObj} isOpen={isOpen} />
 
-      <NoteCard cardObj={msg} isOpen={isOpen} />
+      <NoteCard cardObj={cardObj} isOpen={isOpen} />
     </div>
   );
 };
