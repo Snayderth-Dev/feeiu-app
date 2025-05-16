@@ -38,11 +38,12 @@ const Reminder = () => {
                   RECORDATORIO
                 </h3>
                 <p className="paragraph mt-3">
-                  Quiero que recuerdes que te amo demasiado de aqui a la luna,
-                  nunca lo olvides.
+                  {/*Quiero que recuerdes que te amo demasiado de aqui a la luna,
+                  nunca lo olvides.*/}
+                  Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde.
                 </p>
               </div>
-
+              {/*
               <button
                 className="cursor-pointer border-t-2 border-t-slate-900 text-emerald-400 w-full py-3"
                 onClick={() => {
@@ -52,6 +53,7 @@ const Reminder = () => {
               >
                 Ocultar
               </button>
+              */}
             </div>
           </motion.div>
         )}
@@ -69,5 +71,3 @@ const BackgroundBlack = ({ black }) => {
 };
 
 export default Reminder;
-//{open ? "w-full h-screen bg-black z-50" : ""}
-//
