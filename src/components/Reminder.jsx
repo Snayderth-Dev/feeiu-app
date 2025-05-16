@@ -38,9 +38,9 @@ const Reminder = () => {
                   RECORDATORIO
                 </h3>
                 <p className="paragraph mt-3">
-                  {/*Quiero que recuerdes que te amo demasiado de aqui a la luna,
-                  nunca lo olvides.*/}
-                  Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde.
+                  Quiero que recuerdes que te amo demasiado de aqui a la luna,
+                  nunca lo olvides.
+                  {/*Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde. */}
                 </p>
               </div>
               
