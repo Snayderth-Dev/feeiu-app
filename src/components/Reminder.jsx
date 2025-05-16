@@ -43,7 +43,7 @@ const Reminder = () => {
                   Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde.
                 </p>
               </div>
-              {/*
+              
               <button
                 className="cursor-pointer border-t-2 border-t-slate-900 text-emerald-400 w-full py-3"
                 onClick={() => {
@@ -53,7 +53,7 @@ const Reminder = () => {
               >
                 Ocultar
               </button>
-              */}
+              
             </div>
           </motion.div>
         )}
