@@ -3,7 +3,7 @@ const songs = [
     author: "Chayanne",
     music: "Me Enamoré De Ti",
     link: "https://youtu.be/YJJbrBEZqy8",
-    // load: "En proceso..."
+    load: "En proceso...",
   },
   {
     author: "Binomio de Oro",
