@@ -6,10 +6,10 @@ const songs = [
     load: "En proceso...",
   },
   {
-    author: "Binomio de Oro",
-    music: "Niña Bonita",
-    link: "https://www.youtube.com/watch?v=Fa36CaBfONo",
-    load: "En proceso...",
+    //author: "Binomio de Oro"
+    //music: "Niña Bonita"
+    //link: "https://www.youtube.com/watch?v=Fa36CaBfONo"
+    //load: "En proceso..."
   },
   {
     author: "Arcangel",
