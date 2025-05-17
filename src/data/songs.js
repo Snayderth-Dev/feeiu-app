@@ -1,9 +1,9 @@
 const songs = [
   {
-    author: "Silvestre Dangond",
-    music: "Mi Amor Eres Tu",
-    link: "https://www.youtube.com/watch?v=XS-7A6bdnNA",
-    load: "En proceso...",
+    author: "Chayanne",
+    music: "Me Enamoré De Ti",
+    link: "https://youtu.be/YJJbrBEZqy8",
+    // load: "En proceso..."
   },
   {
     author: "Binomio de Oro",
