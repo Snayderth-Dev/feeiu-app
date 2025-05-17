@@ -43,7 +43,7 @@ const Musics = ({ cancionesObj }) => {
     <ul>
       <li>
         <a
-          href={alert("En proceso")}
+          href={() => alert("En proceso")}
           className="text-principal bg-slate-900 p-3 rounded-full text-center text-[12px] flex justify-center xl:text-[14px]"
         >
           {cancionesObj.music} - {cancionesObj.author}
