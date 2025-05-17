@@ -32,10 +32,12 @@ const Cartas = () => {
 const Card = ({ cardObj }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  //setIsOpen(!isOpen)
+
   return (
     <div
       className="border border-slate-900 rounded-2xl p-3 shadow-md z-20 bg-[#020b14] cursor-pointer"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => alert("No disponible temporalmente...")}
     >
       <PanelProfile cardObj={cardObj} isOpen={isOpen} />
 
