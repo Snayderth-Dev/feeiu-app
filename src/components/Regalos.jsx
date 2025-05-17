@@ -43,10 +43,10 @@ const Musics = ({ cancionesObj }) => {
     <ul>
       <li>
         <a
-          href="#"
+          href={alert("En proceso")}
           className="text-principal bg-slate-900 p-3 rounded-full text-center text-[12px] flex justify-center xl:text-[14px]"
         >
-          {cancionesObj.load}
+          {cancionesObj.music} - {cancionesObj.author}
         </a>
       </li>
     </ul>
