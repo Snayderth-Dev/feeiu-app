@@ -34,13 +34,13 @@ const Reminder = () => {
           >
             <div className="fixed w-76 top-1/2 left-1/2 transform -translate-1/2 z-50 border-2 border-slate-900 rounded-3xl bg-[#020b14] text-center">
               <div className="p-5 text-principal">
-                <h3 className="font-bold text-[18px] font-principial">
-                  RECORDATORIO
+                <h3 className="font-bold text-[18px] font-principial uppercase">
+                  Advertencia
                 </h3>
                 <p className="paragraph mt-3">
-                  Quiero que recuerdes que te amo demasiado de aqui a la luna,
-                  nunca lo olvides.
-                  {/*Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde. */}
+                  {/*Quiero que recuerdes que te amo demasiado de aqui a la luna,
+                  nunca lo olvides.*/}
+                  Este sitio web se encuentra en Mantenimiento, Por favor vuelva más tarde.
                 </p>
               </div>
               {/*
