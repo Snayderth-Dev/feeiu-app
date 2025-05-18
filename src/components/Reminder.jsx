@@ -43,7 +43,7 @@ const Reminder = () => {
                   {/*Este Sitio Web se encuentra en Mantenimiento, Por favor vuelva más tarde. */}
                 </p>
               </div>
-              
+              {/*
               <button
                 className="cursor-pointer border-t-2 border-t-slate-900 text-emerald-400 w-full py-3"
                 onClick={() => {
@@ -53,7 +53,7 @@ const Reminder = () => {
               >
                 Ocultar
               </button>
-              
+              */}
             </div>
           </motion.div>
         )}
@@ -66,7 +66,7 @@ const BackgroundBlack = ({ black }) => {
   if (!black) return null; // Si 'black' es false, no renderizamos nada
 
   return (
-    <div className="w-full h-full fixed top-0 left-0 bg-black opacity-85 z-50 overflow-hidden"></div>
+    <div className="w-full h-full fixed top-0 left-0 bg-black opacity-100 z-50 overflow-hidden"></div>
   );
 };
 
