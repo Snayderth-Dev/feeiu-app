@@ -34,7 +34,7 @@ const Reminder = () => {
             transition={{ duration: 0.2 }}
             className="paragraph text-[16px] text-left mt-2 overflow-hidden"
           >
-            <div className="fixed w-76 top-1/2 left-1/2 transform -translate-1/2 z-50 border-2 border-slate-900 rounded-3xl bg-transparent text-center">
+            <div className="fixed w-76 top-1/2 left-1/2 transform -translate-1/2 z-50 border-2 border-slate-900 rounded-3xl bg-[#020b14] text-center">
               <div className="p-5 text-principal">
                 <h3 className="font-bold text-[18px] font-principial uppercase">
                   Recordatorio
