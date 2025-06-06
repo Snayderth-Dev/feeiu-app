@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-body {
+html, body {
   background-color: #020b14;
   font-family: "Varela Round", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .layout-img {
