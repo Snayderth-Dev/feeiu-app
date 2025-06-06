@@ -52,7 +52,7 @@ const HomeText = () => {
   return (
     <div className="flex flex-col gap-7 lg:gap-8">
       <h1 className="text-principal text-center lg:leading-15 text-4xl font-extrabold font-principial lg:text-6xl md:text-left">
-        ISAQUITO
+        El inicio de una historia que cambio mi mundo.
       </h1>
 
       <p className="paragraph">
